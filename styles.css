@@ -1,11 +1,11 @@
-/* General Page Styling, mostly fonts and whatnot */
+/* General page styling, mostly fonts and whatnot */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f5f5f5;
 }
 
-/* Header Styling */
+/* Header styling */
 #header {
     background-color: #0077e6;
     color: white;
@@ -28,12 +28,12 @@ move directly over */
     margin: 5px .1px 0;
 }
 
-/* Main Content */
+/* Main content settings */
 #main-content {
     padding: 0px 20px;
 }
 
-/* Section Headings */
+/* Section headings */
 h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
 }
@@ -67,21 +67,43 @@ h4, h5, h6 {
     border: 1px solid #ccc;
     padding: 15px;
     margin-top: 30px;
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 /* border is simple enough, but moving it to the right side must
 have some kind of alignment workaround */
+
+/* this was really difficult, but i had to change the
+order of the actual html elements in the css and that solved it */
 #quiz-section img {
     border: 3px solid purple;
     width: 75px;
-    display: inline-flex;
+    order: 2;             /* Push image visually to the end */
     margin-left: auto;
+}
+
+#quiz-section h2 {
+    order: 0;
+    margin: 0 0 10px 0;
 }
 
 #quiz-section form {
     flex: 1;
+    order: 1;             /* Make form come after heading, before image */
+}
+
+/* Insane person workaround, but basically tell everything that isn't
+the image to wrap with given flex variables*/
+
+#quiz-section {
+    flex-wrap: wrap;
+}
+
+
+#quiz-section > *:not(img) {
+    flex: 1 1 75%;
 }
 
 
