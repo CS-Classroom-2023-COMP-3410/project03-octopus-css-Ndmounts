@@ -1,0 +1,119 @@
+/* General Page Styling, mostly fonts and whatnot */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header Styling */
+#header {
+    background-color: #0077e6;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Most of the following is just minor margin adjustments */
+
+/* I cannot for the life of me figure out how to get the text to
+move directly over */
+#header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#header p {
+    font-style: italic;
+    margin: 5px .1px 0;
+}
+
+/* Main Content */
+#main-content {
+    padding: 0px 20px;
+}
+
+/* Section Headings */
+h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+h4, h5, h6 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.important {
+    color: orangered;
+    font-weight: bold;
+}
+
+/* Links looked fine as they are */
+
+/* Quiz Section, Probably the most difficult due to the
+ image not easily being static on the right */
+#quiz-section {
+    background-color: #e6f3ff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* border is simple enough, but moving it to the right side must
+have some kind of alignment workaround */
+#quiz-section img {
+    border: 3px solid purple;
+    width: 75px;
+    display: inline-flex;
+    margin-left: auto;
+}
+
+#quiz-section form {
+    flex: 1;
+}
+
+
+/* Table Section */
+#species-table {
+    padding: 5px;
+}
+
+/* This part was hard to match exactly because I dont know what
+vars to changen for the border type in the image given */
+table {
+    width: 40%;
+    border-width: 2px;
+    border-color: #ccc;
+}
+
+th {
+    background-color: #ccc;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border-top: 1px solid #ddd;
+}
+
+/* Common thread here was messing with margins */
+#footer {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
